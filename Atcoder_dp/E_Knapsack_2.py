@@ -31,4 +31,3 @@ def solve():
             res = j
     print(res)
 solve()
-    

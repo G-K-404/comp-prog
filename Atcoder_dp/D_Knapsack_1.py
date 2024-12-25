@@ -12,15 +12,15 @@ inf = float('inf')
 def solve():
     [n, w] = LII()
     items = []
-    for _ in range(n):
+    for i in range(n):
         temp = LII()
         items.append(temp)
-    dp = [[0]*(w+1) for _ in range(n+1)]
+    dp = [[0]*(w+1) for i in range(n+1)]
     netval = -1
     for i in range(n):
-        for s_w in range(1,w+1):
-            if(s_w - items[i][0] >= 0):
-                dp[i+1][s_w] = max(dp[i+1][s_w], dp[i][s_w - items[i][0]] + items[i][1])
-            dp[i+1][s_w] = max(dp[i+1][s_w], dp[i][s_w])
+        for sw in range(1,w+1):
+            if(sw - items[i][0] >= 0):
+                dp[i+1][sw] = max(dp[i+1][sw], dp[i][sw - items[i][0]] + items[i][1])
+            dp[i+1][sw] = max(dp[i+1][sw], dp[i][sw])
     print(dp[n][w])
 solve()
