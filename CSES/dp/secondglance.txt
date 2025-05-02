@@ -1,1 +1,2 @@
 https://neetcode.io/problems/longest-palindromic-substring
+https://neetcode.io/problems/longest-consecutive-sequence
