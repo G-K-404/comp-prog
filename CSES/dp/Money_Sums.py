@@ -9,23 +9,23 @@ LGLII = lambda: list(map(lambda x: int(x) - 1, input().split()))
 
 inf = float('inf')
 
+
 n = II()
 coins = LII()
-coins.sort()
-sums = set([])
-lis = []
-@lru_cache(None)
+from functools import lru_cache
+
+sums = set()
+
+@lru_cache(maxsize=None)
 def go(i, su):
     if i == n:
-        if su != 0:
-            if su not in sums:
-                lis.append(su)
+        if su > 0:
             sums.add(su)
         return
     go(i + 1, su + coins[i])
     go(i + 1, su)
 
 go(0, 0)
-go.cache_clear()
-print(len(sums))
-print(" ".join(map(str, sorted(lis))))
+ans = sorted(sums)
+print(len(ans))
+print(' '.join(map(str, ans)))

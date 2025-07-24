@@ -51,3 +51,8 @@ def solve():
             if wt+items[i][0]<=w:
                 dp[i][wt] = max(dp[i][wt], dp[i+1][wt+items[i+1][0]+items[i+1][1]])
 print(solve())
+
+#state: total weight accumulated so far and current item
+#transition: take current item and update cost or skip current item
+#base case: if all items have been iterated
+#final result maximum value obatained with weight less than or equal to threshold
