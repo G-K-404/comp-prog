@@ -1,0 +1,1 @@
+{"name":"Local: bestskills","url":"c:\\Users\\karth\\OneDrive\\Desktop\\Codeforces\\bestskills.cpp","tests":[{"id":1733794601649,"input":"1\n2\n6\n5\n3 3\n5 4\n4 1\n2 3\n1 1","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\karth\\OneDrive\\Desktop\\Codeforces\\bestskills.cpp","group":"local","local":true}

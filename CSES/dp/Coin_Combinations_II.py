@@ -1,3 +1,4 @@
+from functools import lru_cache
 import sys
 I = lambda: input()
 II = lambda: int(input())
@@ -13,19 +14,38 @@ inf = float('inf')
 
 [n,t] = LII()
 coins = LII()
-mod = 10**9+7
-# def go(ind, curramt):
+MOD = 10**9+7
+# @lru_cache(None)
+# def go(i, curramt):
 #     if curramt>t:
 #         return 0
 #     if curramt == t:
 #         return 1
+#     if i==n:
+#         return 0
 #     ans = 0
-#     for i in range(ind, len(coins)):
-#         ans += go(i, curramt+coins[i])
-#         ans%=mod
+#     ans+=go(i,curramt+coins[i])
+#     ans+=go(i+1,curramt)
 #     return ans
-# r = go(0,0)%mod
+# r = go(0,0)%MOD
+# go.cache_clear()
 # print(r)
+
+# dp = [[0]*(t+1) for _ in range(n+1)]
+# for i in reversed(range(n)):
+#     for j in reversed(range(t+1)):
+#         if j==t:
+#             dp[i][j] = 1
+#             continue
+#         ans = 0
+#         if j+coins[i]<=t:
+#             ans=(ans+dp[i][j+coins[i]])%MOD
+#         ans=(ans+dp[i+1][j])%MOD
+#         dp[i][j] = ans
+# print(dp[0][0]%MOD)
+
+
+            
 
 # dp = [0]*(t+1)
 

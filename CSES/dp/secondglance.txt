@@ -2,3 +2,6 @@ https://neetcode.io/problems/longest-palindromic-substring
 https://neetcode.io/problems/longest-consecutive-sequence
 https://neetcode.io/problems/valid-sudoku
 https://neetcode.io/problems/three-integer-sum
+https://neetcode.io/problems/longest-substring-without-duplicates
+https://neetcode.io/problems/reverse-a-linked-list
+https://neetcode.io/problems/longest-repeating-substring-with-replacement

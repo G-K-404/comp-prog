@@ -12,7 +12,7 @@ inf = float('inf')
 [n,x] = LII()
 costs = LII()
 pages = LII()
-memo = {}
+
 
 # def dp(ind, remaining_cost):
 #     # Base case: no books left
@@ -38,13 +38,16 @@ memo = {}
 
 # # Run the DP function
 # print(dp(0, x))
-
+memo = {}
 def go(cost, i):
     if i >= n:
         return 0
-    ans = go(cost, i + 1) 
+    if (cost, i) in memo:
+        return memo[(cost, i)]
+    ans = go(cost, i + 1)
     if cost + costs[i] <= x:
         ans = max(ans, go(cost + costs[i], i + 1) + pages[i]) 
+    memo[(cost, i)] = ans
     return ans
 print(go(0,0))
 
