@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 MOD = 10 ** 9 + 7
 
 n, k = map(int, input().split())
@@ -21,3 +22,19 @@ for i in range(n):
     dp = new_dp
 
 print(dp[k])
+=======
+I = lambda: input()
+II = lambda: int(input())
+MII = lambda: map(int, input().split())
+LI = lambda: list(input().split())
+LII = lambda: list(map(int, input().split()))
+LGMII = lambda: map(lambda x: int(x) - 1, input().split())
+LGLII = lambda: list(map(lambda x: int(x) - 1, input().split()))
+
+
+inf = float('inf')
+
+n,k = MII()
+a = LII()
+
+>>>>>>> 2f6612852ebc014714fb29b63627e467478aa78c
